@@ -4,11 +4,10 @@
         <input type="text" wire:model="body">
         <button class="bg-gray-600 text-white shadow-lg py-1 px-2 rounded-md"type="submit">Submit</button>
         @error('body') <span class="text-red-600 italic text-sm">{{ $message }}</span> @enderror
- 
     </form>
     <div class="ml-2 py-1 px-1">
         @foreach ($comment["comments"] as $comment)
-            <livewire:comment  :comment="$comment" :wire:key="$loop->index"/>
+            <livewire:comment :comment="$comment" :wire:key="$loop->index"/>
         @endforeach
     </div>
 </div>
