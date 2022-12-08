@@ -2,10 +2,10 @@
     <a href="/"> Back to Topics </a>
     <div class="bg-red-300 pb-2 pl-2">
     <div>{{$topic["title"]}}</div>
-    <form class="flex ml-2 gap-2 items-center"  wire:submit.prevent="submit">
+    <form class="flex ml-2 gap-2 mb-1 items-center"  wire:submit.prevent="submit">
         <input type="text" wire:model="body">
         <select wire:model="type">
-            <option>Link</option>s
+            <option>Link</option>
             <option>Post</option>
             <option>Image</option>
         </select>
