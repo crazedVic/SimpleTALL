@@ -8,7 +8,7 @@
 
     @foreach ($topic["comments"] as $comment)
         <livewire:comment :comment="$comment" 
-            :wire:key="$loop->index . rand() "/>
+            :wire:key="$comment['id'] "/>
     @endforeach
     <!-- :wire:key could be the comment id if we were actually using the api -->
 

@@ -1,5 +1,5 @@
 <div class="ml-2 bg-blue-300 py-1 px-1">
-    <div>{{$comment["body"]}}</div>
+    <div>{{$comment["id"]. " " . $comment["body"]}}</div>
     <form class="flex ml-2 gap-2 items-center"  wire:submit.prevent="submit">
         <input type="text" wire:model="body">
         <button class="bg-gray-600 text-white shadow-lg py-1 px-2 rounded-md"type="submit">Submit</button>
@@ -7,7 +7,7 @@
     </form>
     <div class="ml-2 py-1 px-1">
         @foreach ($comment["comments"] as $comment)
-            <livewire:comment :comment="$comment" :wire:key="$loop->index"/>
+            <livewire:comment :comment="$comment" :wire:key="$comment['id']"/>
         @endforeach
     </div>
 </div>

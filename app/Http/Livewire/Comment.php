@@ -31,10 +31,9 @@ class Comment extends Component
         // append array
         if($this->validate())
         {
-            error_log("submitted");
-            
             array_push($this->comment["comments"],
                 [
+                    "id"=> app()->get("getNextId")(),
                     "body"=>$this->body,
                     "author" => "Steve",
                     "comments" => []

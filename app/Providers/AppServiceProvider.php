@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Session;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -67,5 +68,17 @@ class AppServiceProvider extends ServiceProvider
             ]
         ];
         app()->instance("data", $data);
+
+        app()->instance("getNextId", function(){
+            if(!Session::has("counter")){
+                $current = 5;
+            }
+            else{
+                $current = Session::get("counter");
+            }
+            $current ++;
+            session(['counter' => $current]);
+            return $current;
+        });
     }
 }

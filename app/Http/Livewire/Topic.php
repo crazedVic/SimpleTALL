@@ -28,10 +28,9 @@ class Topic extends Component
         if($this->validate())
         {
             error_log("submitted");
-            
             array_unshift($this->topic["comments"],
                 [
-                    "id" => time(),
+                    "id" => app()->get("getNextId")(),
                     "body"=>$this->body,
                     "author" => "Steve",
                     "comments" => []
