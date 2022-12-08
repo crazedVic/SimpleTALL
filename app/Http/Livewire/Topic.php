@@ -8,12 +8,14 @@ class Topic extends Component
 {
     public $topic;
     public $body;
+    public $type;
 
     public $rules =[
         "body" => "required|string|min:4"
     ];
 
     public function mount($id){
+            $this->type="Post";
             $this->topic = app()->get("data")[$id];
     }
 

@@ -4,6 +4,11 @@
     <div>{{$topic["title"]}}</div>
     <form class="flex ml-2 gap-2 items-center"  wire:submit.prevent="submit">
         <input type="text" wire:model="body">
+        <select wire:model="type">
+            <option value="Link">Link</option>
+            <option value="Post">Post</option>
+            <option value="Image">Image</option>
+        </select>
         <button class="bg-gray-600 text-white shadow-lg py-1 px-2 rounded-md"type="submit">Submit</button>
         @error('body') <span class="text-red-600 italic text-sm">{{ $message }}</span> @enderror
     </form>
