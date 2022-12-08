@@ -1,4 +1,6 @@
-<div class="bg-red-300 pb-2 pl-2">
+<div >
+    <a href="/"> Back to Topics </a>
+    <div class="bg-red-300 pb-2 pl-2">
     <div>{{$topic["title"]}}</div>
     <form class="flex ml-2 gap-2 items-center"  wire:submit.prevent="submit">
         <input type="text" wire:model="body">
@@ -11,5 +13,5 @@
             :wire:key="$comment['id'] "/>
     @endforeach
     <!-- :wire:key could be the comment id if we were actually using the api -->
-
+</div>
 </div>

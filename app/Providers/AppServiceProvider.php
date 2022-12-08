@@ -26,7 +26,8 @@ class AppServiceProvider extends ServiceProvider
     {
         // fake data for what we need
         $data = [
-            [   "title" => "Topic 1",
+            [   "id"=> 0,
+                "title" => "Topic 1",
                 "body"=>"This is the body of topic 1",
                 "comments"=>[[
                     "id" => 1,
@@ -42,7 +43,8 @@ class AppServiceProvider extends ServiceProvider
                     ]
                     ]
             ],
-            [   "title" => "Topic 2",
+            [   "id"=> 1,
+                "title" => "Topic 2",
                 "body"=>"This is the body of topic 2",
                 "comments"=>[
                     [

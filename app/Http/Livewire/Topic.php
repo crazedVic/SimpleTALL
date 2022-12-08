@@ -13,6 +13,10 @@ class Topic extends Component
         "body" => "required|string|min:4"
     ];
 
+    public function mount($id){
+            $this->topic = app()->get("data")[$id];
+    }
+
     public function render()
     {
         return view('livewire.topic');

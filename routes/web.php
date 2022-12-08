@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Topics;
+use App\Http\Livewire\Topic;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,4 @@ use App\Http\Livewire\Topics;
 */
 
 Route::get('/', Topics::class);
+Route::get('/topic/{id}', Topic::class);

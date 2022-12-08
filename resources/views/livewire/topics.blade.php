@@ -1,5 +1,6 @@
 <div>
     @foreach(app()->get("data") as $topic)
-         <livewire:topic :topic="$topic" :wire:key="$loop->index"/>
+          <div><a href="/topic/{{$topic['id']}}">{{$topic["title"]}}</a></div>
     @endforeach
+
 </div>
